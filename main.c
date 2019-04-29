@@ -55,29 +55,28 @@ int main(){
        case 2:  fprintf(input, "\nSubstitution Cipher");
                 fprintf(input, "\nPress run after message entered to encrypt message. Then view the terminal for encrypted text.");
                 fprintf(input, "\nType Message: "); 
-                fprintf(input, "\n                                                                   ");
                 char message[10000];
                 int b = i-1;
-                
                 while(feof(input) == 0){
                     fscanf(input, "%c", &message[i]);                    //Scans words from input.txt file
                     i++;
                 }
+                fprintf(input, "\n                                                                   ");                                            
     
                 /*f*/printf(/*output,*/ "Substitution Cipher\n");
                 /*f*/printf(/*output,*/ "Encrypted (Substitution, no spaces) Text: ");
                 subEncrypt(message);                           //Encrypts message
     
                 for(i = 0; i < b;){
-                /*f*/printf(/*output,*/ "%c", message[i]);
-                i++;
+                    ///*f*/printf(/*output,*/ "%c", message[i]);
+                    i++;
                 }
     
                 /*f*/printf(/*output,*/ "\nDecrypted (Substitution, no spaces) Text: ");
                 subDecrypt(message);
                 for(i = 0; i < b;){
-                /*f*/printf(/*output,*/ "%c", message[i]);
-                i++;
+                   /*f*/printf(/*output,*/ "%c", message[i]);
+                   i++;
                 }
                     break; 
                     
