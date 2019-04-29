@@ -5,8 +5,8 @@
 #include<ctype.h>
 
 //Function prototypes
-void encrypt(char *message);
-void decrypt(char *message);                                      //Prototype for decryption function
+void subEncrypt(char *message);
+void subDecrypt(char *message);                                      //Prototype for decryption function
 
 
 
@@ -30,7 +30,7 @@ int main(){
     
     /*f*/printf(/*output,*/ "Substitution Cipher\n");
     /*f*/printf(/*output,*/ "Encrypted (Substitution, no spaces) Text: ");
-    encrypt(message);                           //Encrypts message
+    subEncrypt(message);                           //Encrypts message
     
     for(i = 0; i < b;){
         /*f*/printf(/*output,*/ "%c", message[i]);
@@ -38,7 +38,7 @@ int main(){
     }
     
     /*f*/printf(/*output,*/ "\nDecrypted (Substitution, no spaces) Text: ");
-    decrypt(message);
+    subDecrypt(message);
     for(i = 0; i < b;){
         /*f*/printf(/*output,*/ "%c", message[i]);
         i++;
@@ -47,7 +47,7 @@ int main(){
 
 
 //Function for encryption
-void encrypt(char *message){
+void subEncrypt(char *message){
     //FILE *output;
     //output = fopen("output.txt", "w");
     int length = strlen(message);
@@ -66,7 +66,7 @@ void encrypt(char *message){
 }
 
 //Function for decryption
-void decrypt(char *message){
+void subDecrypt(char *message){
     //FILE *output;
     //output = fopen("output.txt", "w");
     int length = strlen(message);
