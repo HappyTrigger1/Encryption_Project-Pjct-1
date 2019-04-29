@@ -1,3 +1,9 @@
+/*
+A large block comment should be at the top of your code which describes the high-level operation of
+the program. It should also include any user-interface notes (eg: how should the demonstrator choose
+between encryption and decryption?)
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
@@ -23,13 +29,10 @@ int main(){
     //FILE *output;
     input = fopen("input.txt", "r+");
     //output = fopen("output.txt", "w");
-    
- 
-    
+        
     fprintf(input, "Enter 1 for rotation or 2 for substitution, then hit 'run' to start: ");
     int select = 0;
     fscanf(input, "%d", &select);
-     
     switch (select) { 
        case 1:  fprintf(input, "\nRotation Cipher");
                 fprintf(input, "\nPress run after message entered to encrypt message. Then view the terminal for encrypted text.");
@@ -42,11 +45,8 @@ int main(){
                     fscanf(input, "%c", &c[i]);                    //Scans words from input.txt file
                     i++;
                 }
-
                 rotEncrypt(c);                                     //Encrypts the words from input.txt
                     break; 
-
-
                     
        case 2:  fprintf(input, "\nSubstitution Cipher");
                 fprintf(input, "\nPress run after message entered to encrypt message. Then view the terminal for encrypted text.");
@@ -59,17 +59,16 @@ int main(){
                     fscanf(input, "%c", &message[i]);                    //Scans words from input.txt file
                     i++;
                 }
-    
                 /*f*/printf(/*output,*/ "Substitution Cipher\n");
                 /*f*/printf(/*output,*/ "Encrypted (Substitution, no spaces) Text: ");
+                
                 subEncrypt(message);                           //Encrypts message
-    
                 for(i = 0; i < b;){
                 /*f*/printf(/*output,*/ "%c", message[i]);
                 i++;
                 }
-    
                 /*f*/printf(/*output,*/ "\nDecrypted (Substitution, no spaces) Text: ");
+                
                 subDecrypt(message);
                 for(i = 0; i < b;){
                 /*f*/printf(/*output,*/ "%c", message[i]);
@@ -85,12 +84,16 @@ int main(){
 
 
 
-
-
-
-
-
 //Function Definitions for Rotation
+
+/*
+What are the inputs?
+– What is the return value?
+– What does the function do?
+– Are there limitations to the function? Must strings be less than a certain length? Are there data
+type restrictions?
+*/
+
 //Function definition for encryption/decryption
 void rotEncrypt(char arr[]){
     //FILE *output;                                     //Establishes a file output.txt
@@ -99,8 +102,7 @@ void rotEncrypt(char arr[]){
     /*f*/printf(/*output, */"Rotation Cipher");   
     /*f*/printf(/*output, */"\nKey: 1");
     /*f*/printf(/*output, */"\nEncrypted (Rotation [shift = 1], encrypted spcaes) Message: ");
-    
-    
+        
     for(i = 0; i < strlen(arr); i++){
         arr[i] = arr[i] + 1;                          //Shifts letters across 1 for encryption
         /*f*/printf(/*output, */"%c", arr[i]);                //Writes the encrypted word to output.txt
@@ -114,13 +116,19 @@ void rotEncrypt(char arr[]){
         /*f*/printf(/*output, */"%c", arr[k]);                //Writes the decrypted word to output.txt
         }
 }
-
   
 
 
-
-
 //Function Definitions for Substitution
+
+/*
+What are the inputs?
+– What is the return value?
+– What does the function do?
+– Are there limitations to the function? Must strings be less than a certain length? Are there data
+type restrictions?
+*/
+
 //Function definition for encryption
 void subEncrypt(char *message){
     //FILE *output;
@@ -139,6 +147,16 @@ void subEncrypt(char *message){
         }   
     }
 }
+
+
+
+/*
+What are the inputs?
+– What is the return value?
+– What does the function do?
+– Are there limitations to the function? Must strings be less than a certain length? Are there data
+type restrictions?
+*/
 
 //Function definition for decryption
 void subDecrypt(char *message){
