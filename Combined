@@ -1,5 +1,5 @@
 /*
-Rotation and Substitution Cipher
+Rotation and Substitution Cipher Code
 
 This code will allow a user to select the use of either rotation cipher or a substitution cipher to encrypt and decrypt text of their choosing. 
 The code operates by using various functions that are used for each method of encryption and decryption. For the rotation cipher, one function is used for 
@@ -13,6 +13,9 @@ USE:
 It is advised that any user BEFORE using this program has a file called 'input.txt' already avaliable with NOTHING inside it. All the user does now is
 hit run, and the program will guide them through the process of how to use the code. Again, ALL input is taken from the input.txt file. And ALL output is
 displayed within the terminal for ease of use. 
+This program allowes the following: 
+ - Rotation Cipher (user gives message and key from file)
+ - Substitution Cipher (user gives message from file)
 
 Note: 
 This program was originally written to have both input and output going to files. Input coming from input.txt and output going to output.txt. The 
