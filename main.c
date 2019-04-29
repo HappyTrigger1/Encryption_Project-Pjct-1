@@ -32,7 +32,7 @@ int main(){
      
     switch (select) { 
        case 1:  fprintf(input, "\nRotation Cipher");
-                fprintf(input, "\nKey: ");
+                fprintf(input, "\nEnter a key between 1 and 11: ");
                 int u = 0;
                 fscanf(input, "%d", &u);
                 fprintf(input, "\nPress run after message and key entered to encrypt message. Then view the terminal for encrypted text.");
@@ -55,7 +55,7 @@ int main(){
        case 2:  fprintf(input, "\nSubstitution Cipher");
                 fprintf(input, "\nPress run after message entered to encrypt message. Then view the terminal for encrypted text.");
                 fprintf(input, "\nType Message: "); 
-                
+                fprintf(input, "\n                                                                   ");
                 char message[10000];
                 int b = i-1;
                 
@@ -81,7 +81,7 @@ int main(){
                 }
                     break; 
                     
-       default: fprintf(input, "\nPlease enter an integer 1 or 2                                                                                                            "); 
+       default: fprintf(input, "\nPlease enter an integer 1 or 2                                                                                                            ");
                 printf("No input found in 'input.txt' file... \nPlease open 'input.txt' or create a text file called 'input.txt' before using program.");    
                     break;   
      }
